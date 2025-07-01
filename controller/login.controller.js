@@ -19,7 +19,7 @@ exports.login = async (req, res) => {
     if (existingUser) {
       // ถ้าชื่อซ้ำ → เช็คว่าเบอร์ตรงหรือไม่
       if (existingUser.phone_number !== phone) {
-        return res.status(400).send({ message: 'Phone number does not match the registered name.' });
+        return res.status(400).send({ message: 'รหัสผ่านไม่ถูก' });
       }
 
       // เบอร์ตรง → ล็อกอินสำเร็จ
